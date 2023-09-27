@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={eudoxus.className}>
       <body className="min-h-screen antialiased">
-        <div className="flex min-h-screen flex-col">
+        <div className="flex min-h-screen flex-col bg-primary-black overflow-hidden">
           <Navbar />
           <main className="flex-grow">{children}</main>
           <Footer />
