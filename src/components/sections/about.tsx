@@ -1,16 +1,15 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import styles from "@/styles";
 import { fadeIn, staggerContainer } from "@/utils/motion";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FC } from "react";
 import { TypingText } from "../custom-texts";
-import Image from "next/image";
 
 const About: FC = () => {
   return (
-    <section className={cn(`${styles.paddings}`, "relative z-20")}>
+    <section className={cn("paddings relative z-20")}>
       <div className="gradient-02 z-0" />
       <motion.div
         variants={staggerContainer(0.5, 0.1)}
@@ -20,10 +19,7 @@ const About: FC = () => {
           once: false,
           amount: 0.25,
         }}
-        className={cn(
-          `${styles.innerWidth} ${styles.flexCenter}`,
-          "mx-auto flex-col"
-        )}
+        className={cn("innerWidth flexCenter mx-auto flex-col")}
       >
         <TypingText title="| About Metaversus" textStyles="text-center" />
 

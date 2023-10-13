@@ -1,16 +1,15 @@
 "use client";
 
-import { FC } from "react";
-import { motion } from "framer-motion";
-import styles from "@/styles";
-import { slideIn, staggerContainer, textVariant } from "@/utils/motion";
 import { cn } from "@/lib/utils";
+import { slideIn, staggerContainer, textVariant } from "@/utils/motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { FC } from "react";
 
 const Hero: FC = () => {
   return (
-    <section className={cn(`${styles.yPaddings} sm:pl-16 pl-6`)}>
+    <section className={cn(`yPaddings sm:pl-16 pl-6`)}>
       <motion.div
         variants={staggerContainer(0.5, 0.1)}
         initial="hidden"
@@ -19,22 +18,19 @@ const Hero: FC = () => {
           once: false,
           amount: 0.25,
         }}
-        className={cn(`${styles.innerWidth}`, "mx-auto flex flex-col")}
+        className={cn("innerWidth mx-auto flex flex-col")}
       >
         <div className="flex justify-center items-center flex-col relative z-20">
-          <motion.h1
-            variants={textVariant(1.1)}
-            className={cn(`${styles.heroHeading}`)}
-          >
+          <motion.h1 variants={textVariant(1.1)} className={cn("heroHeading")}>
             Metaverse
           </motion.h1>
           <motion.div
             variants={textVariant(1.2)}
             className="flex justify-center items-center"
           >
-            <h1 className={cn(`${styles.heroHeading}`)}>Ma</h1>
+            <h1 className={cn("heroHeading")}>Ma</h1>
             <div className="md:w-[212px] sm:w-[80px] w-[60px] md:h-[108px] sm:h-[48px] h-[38px] md:border-[18px] border-[9px] rounded-r-[50px] border-white sm:mx-2 mx-[6px]" />
-            <h1 className={cn(`${styles.heroHeading}`)}>Ness</h1>
+            <h1 className={cn("heroHeading")}>Ness</h1>
           </motion.div>
         </div>
 
