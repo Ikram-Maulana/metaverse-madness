@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import { textContainer, textVariant2 } from "@/utils/motion";
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
 const TypingText = ({
   title,
@@ -39,10 +40,22 @@ const TitleText = ({
   title,
   textStyles,
 }: {
-  title: string;
+  title: ReactNode;
   textStyles: string;
 }) => {
-  return <div>Title Text</div>;
+  return (
+    <motion.h2
+      variants={textVariant2}
+      initial="hidden"
+      whileInView="show"
+      className={cn(
+        `${textStyles}`,
+        "mt-2 font-bold md:text-[64px] text-[40px] text-white"
+      )}
+    >
+      {title}
+    </motion.h2>
+  );
 };
 
 export { TypingText, TitleText };
