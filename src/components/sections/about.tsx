@@ -1,11 +1,11 @@
 "use client";
 
+import { TypingText } from "@/components/custom-texts";
 import { cn } from "@/lib/utils";
 import { fadeIn, staggerContainer } from "@/utils/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FC } from "react";
-import { TypingText } from "../custom-texts";
 
 const About: FC = () => {
   return (
@@ -52,7 +52,6 @@ const About: FC = () => {
           />
         </motion.div>
       </motion.div>
-      About Section
     </section>
   );
 };
