@@ -6,7 +6,6 @@ import { insights } from "@/constants";
 import { cn } from "@/lib/utils";
 import { staggerContainer } from "@/utils/motion";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { FC } from "react";
 
 const Insights: FC = () => {
